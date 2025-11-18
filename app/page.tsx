@@ -228,7 +228,7 @@ export default function MobileOrderApp() {
       <SimpleModal open={showLoadDraft} title="임시저장 불러오기" message="임시저장된 내용이 있습니다. 불러올까요?" onConfirm={confirmLoadDraft} onCancel={discardDraft} confirmText="예" cancelText="아니오" />
       <SimpleModal open={showSubmitConfirm} title="확인" message={"이대로 주문하시겠습니까?"} onConfirm={()=>{ setShowSubmitConfirm(false); handleSubmit(); }} onCancel={()=>setShowSubmitConfirm(false)} confirmText="네" cancelText="아니오" />
 
-      <h1 className="text-2xl font-bold mb-3 text-gray-800 flex items-center gap-2">🥬 ○○식품 주문시스템 🧂</h1>
+      <h1 className="text-2xl font-bold mb-3 text-gray-800 flex items-center gap-2">✅ 경북식품 주문시스템 📦</h1>
       <div className="h-px w-full max-w-sm bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-5" />
 
       {/* 홈 */}
@@ -236,7 +236,7 @@ export default function MobileOrderApp() {
         <div className="grid grid-cols-1 gap-3 w-full max-w-xs">
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={goToOrder} className="pointer-events-auto" role="button" tabIndex={0}>
             <Card className="shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-white ring-1 ring-black/5">
-              <CardContent className="flex flex-col items-center justify-center p-8">
+              <지점classNameCardContent className="flex flex-col items-center justify-center p-8">
                 <span className="text-xl font-semibold text-gray-700 mb-2">주문하기</span>
                 <span className="text-sm text-gray-500">새 주문을 등록합니다</span>
               </CardContent>
@@ -255,7 +255,7 @@ export default function MobileOrderApp() {
           <a href="tel:01012345678" className="block pointer-events-auto" aria-label="전화 문의하기">
             <Card className="shadow-lg hover:shadow-xl transition-shadow rounded-2xl bg-white ring-1 ring-black/5">
               <CardContent className="flex items-center justify-center p-3">
-                <span className="text-base font-semibold text-gray-700">📞 전화문의 <span className="ml-1 text-xs text-gray-500">010-1234-5678</span></span>
+                <span className="text-base font-semibold text-gray-700">📞 전화문의 <span className="ml-1 text-xs text-gray-500">010-5488-0643</span></span>
               </CardContent>
             </Card>
           </a>
@@ -276,7 +276,7 @@ export default function MobileOrderApp() {
 
             <div className="relative">
               <label className="text-sm text-gray-600">발주일자 <span className="text-xs text-gray-400">( 눌러서 수정 가능 )</span></label>
-              <div className="mt-1"><Input type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} /></div>
+              <div className="mt-1"><Input type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} className="bg-white" /></div>
             </div>
 
             <div className="mt-2">
@@ -350,7 +350,7 @@ export default function MobileOrderApp() {
               </div>
             )}
 
-            <Input placeholder="그 외 요청사항이 있으면 여기에 입력해 주세요" value={form.note} onChange={(e)=> setForm({ ...form, note: e.target.value })} />
+            <Input placeholder="그 외 요청사항이 있으면 여기에 입력해 주세요" value={form.note} onChange={(e)=> setForm({ ...form, note: e.target.value })} className="bg-white"/>
           </div>
 
           <div className="flex gap-3 mt-6 relative z-10">

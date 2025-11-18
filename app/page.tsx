@@ -310,7 +310,7 @@ export default function MobileOrderApp() {
     }
     for (const row of form.items) {
       if (!row.quantity || row.quantity.toString().trim() === "") {
-        alert("수량 입력이 누락 되었습니다");
+        
         setErrorItemId(row.id);
         return false;
       }
